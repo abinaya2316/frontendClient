@@ -9,13 +9,13 @@ const User = () => {
     const [user, setUser] = useState([])
 
     useEffect(()=>{
-        axios.get('https://backendserver-i9jl.onrender.com/')
+        axios.get('https://backendserver-mgfs.onrender.com/')
         .then(result => setUser(result.data))
         .catch(err=>console.log(err))
     },[])
 
     const handleDelete = (id) => {
-        axios.delete(`https://backendserver-i9jl.onrender.com/${id}`)
+        axios.delete(`https://backendserver-mgfs.onrender.com/${id}`)
         .then(res => {console.log(res)
             window.location.reload()
         })

@@ -10,7 +10,7 @@ const CreateUser = () => {
 
     const Submit = (e) => {
         e.preventDefault();
-        axios.post("https://backendserver-i9jl.onrender.com/createUser",{name,email,age})
+        axios.post("https://backendserver-mgfs.onrender.com/createUser",{name,email,age})
         .then(result => {
             console.log(result)
             navigate('/')

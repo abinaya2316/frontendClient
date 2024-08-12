@@ -10,7 +10,7 @@ const UpdateUser = () => {
     const navigate = useNavigate()
 
     useEffect(()=>{
-        axios.get(`https://backendserver-i9jl.onrender.com/getUser/${id}`)
+        axios.get(`https://backendserver-mgfs.onrender.com/getUser/${id}`)
         .then(result => {
             console.log(result)
             setName(result.data.name)
@@ -22,7 +22,7 @@ const UpdateUser = () => {
     
     const Update = (e) => {
         e.preventDefault();
-        axios.put(`https://backendserver-i9jl.onrender.com/${id}`,{name,email,age})
+        axios.put(`https://backendserver-mgfs.onrender.com/${id}`,{name,email,age})
         .then(result => {
             console.log(result)
             navigate('/')
